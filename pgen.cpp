@@ -1,4 +1,4 @@
-﻿// PasswordGen.cpp : Defines the entry point for the console application.
+﻿// pgen.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -61,6 +61,7 @@ int main(int argc, char* argv[])
 		{
 			printf("pgen directory already exists...\n");
 		}
+		Add more error handlers here!
 	}*/
 	
 	//COMMANDS AVAILABLE FOR USE FROM COMMAND LINE
