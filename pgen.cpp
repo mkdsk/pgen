@@ -188,7 +188,7 @@ int main(int argc, char* argv[])
 	{
 		printf("\npgen v1.0 by mkdsk");
 		printf("\nEasy to use, command line password manager");
-		printf("https://github.com/mkdsk/pgen\n");
+		printf("\nhttps://github.com/mkdsk/pgen\n");
 		printf("\n");
 		printf("\npgen init"); 
 		printf("\npgen lib");
