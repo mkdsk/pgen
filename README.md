@@ -13,4 +13,4 @@ pgen cpy [name] - Copies the specified password to the clipboard
 
 pgen gen [name] [length] - Generates password with name with length length
 
-(Download)[http://www.mediafire.com/file/me88yyzm17nyvf1/pgen.exe/file]
+[Download](http://www.mediafire.com/file/me88yyzm17nyvf1/pgen.exe/file)
