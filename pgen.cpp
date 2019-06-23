@@ -12,7 +12,8 @@
 const std::string APP_VERSION = "v0.01";
 const std::string APP_AUTHOR = "mkdsk";
 
-std::string p_Folder;
+//TODO: Read this from a file so it keeps it. 
+std::string p_Folder = "C:\\Program Files\\pgen";
 
 /* Generate a password based off of various parameters provided by the user */
 /* Similar characters: i, l, 1, L, o, 0, O */
@@ -30,16 +31,29 @@ int main(int argc, char* argv[])
 
 	if (argc > 1) // More arguments than just the program name. 
 	{
-		if (strcmp(argv[1], "f") == 0) //pgen f
+		if (strcmp(argv[1], "init") == 0)
 		{
-			if (strcmp(argv[2], "set") == 0) //pgen f set
-			{
-				printf("set"); 
-			}
-			else if (strcmp(argv[2], "create") == 0)
-			{
-				printf("create");
-			}
+			//First, check if C:\Program Files\pgen exists
+			//If not, tell the user they must use pgen init	
+			//Make sure argv[2] doesn't exist also.
+		}
+		else if (strcmp(argv[1], "lib") == 0) //pgen lib
+		{
+			//First, check if C:\Program Files\pgen exists
+			//If not, tell the user they must use pgen init
+			//Make sure argv[2] doesn't exist also.
+		}
+		else if (strcmp(argv[1], "gen") == 0) //pgen gen
+		{
+			//First, check if C:\Program Files\pgen exists
+			//If not, tell the user they must use pgen init	
+			//Get argv[2] == name and argv[3] == length and make sure no other args are there.
+		}
+		else if (strcmp(argv[1], "cpy") == 0) //pgen cpy
+		{
+			//First, check if C:\Program Files\pgen exists
+			//If not, tell the user they must use pgen init	
+			//Get argv[2] == name. and make sure no other args are there.
 		}
 	}
 	else // User entered no arguments, display help menu
@@ -47,8 +61,7 @@ int main(int argc, char* argv[])
 		printf("\npgen v1.0 by mkdsk");
 		printf("\nEasy to use, portable command line password manager");
 		printf("\n");
-		printf("\npgen f set [location]");
-		printf("\npgen f create [location]");
+		printf("\npgen init"); //Creates p_Folder (MUST BE USED FIRST)
 		printf("\npgen lib");
 		printf("\npgen gen [name] [length]");
 		printf("\npgen cpy [name]");
@@ -64,13 +77,6 @@ int main(int argc, char* argv[])
 		Add more error handlers here!
 	}*/
 	
-	//COMMANDS AVAILABLE FOR USE FROM COMMAND LINE
-	//pgen f set D:\\usr\\example: Sets the folder to be used by the program to store passwords
-	//pgen f create D:\\usr\\example NAME: Creates a folder and sets it to be used by the program
-	//pgen (no other arguments): Lists what the program does and its commands
-	//pgen lib: Lists each file in the pgen directory
-	//pgen gen <NAME> <LENGTH> : Generate a password of file NAME with length LENGTH (max 8096)
-	//pgen cpy <NAME> : Copies the specified password to clipboard	
 
     return 0;
 }
